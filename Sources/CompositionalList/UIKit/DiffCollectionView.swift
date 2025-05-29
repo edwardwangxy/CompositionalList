@@ -44,7 +44,7 @@ public final class DiffCollectionView<ViewModel: SectionIdentifierViewModel,
    
     // MARK:- Life Cycle
     convenience init(layout: UICollectionViewLayout,
-                     collectionViewDelegate: UICollectionViewDelegate,
+                     collectionViewDelegate: UICollectionViewDelegate, customConfiguration: ((UICollectionView) -> Void)? = nil,
                      @ViewBuilder _ cellProvider: @escaping CellProvider,
                      _ headerFooterProvider: HeaderFooterProvider?) {
         self.init()
@@ -54,6 +54,7 @@ public final class DiffCollectionView<ViewModel: SectionIdentifierViewModel,
         collectionView.registerHeader(WrapperCollectionReusableView<HeaderFooterView>.self, kind: UICollectionView.elementKindSectionHeader)
         collectionView.registerHeader(WrapperCollectionReusableView<HeaderFooterView>.self, kind: UICollectionView.elementKindSectionFooter)
         collectionView.delegate = collectionViewDelegate
+        customConfiguration?(collectionView)
         view.addSubview(collectionView)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([

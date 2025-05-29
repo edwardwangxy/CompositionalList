@@ -34,11 +34,13 @@ public struct CompositionalList<ViewModel: SectionIdentifierViewModel,
     var selectionProvider: SelectionProvider?
 
     private (set)var headerProvider: Diff.HeaderFooterProvider? = nil
+    var customConfiguration: ((UICollectionView) -> Void)?
     
-    public init(_ items: [ViewModel],
+    public init(_ items: [ViewModel], customConfiguration: ((UICollectionView) -> Void)? = nil,
                 @ViewBuilder cellProvider: @escaping Diff.CellProvider) {
         self.cellProvider = cellProvider
         self.itemsPerSection = items
+        self.customConfiguration = customConfiguration
     }
     
     public func makeCoordinator() -> Coordinator {
@@ -77,8 +79,9 @@ public struct CompositionalList<ViewModel: SectionIdentifierViewModel,
 extension CompositionalList: UIViewControllerRepresentable {
     
     public func makeUIViewController(context: Context) -> Diff {
-        return Diff(layout: context.coordinator.layout,
+        Diff(layout: context.coordinator.layout,
              collectionViewDelegate: context.coordinator,
+             customConfiguration: self.customConfiguration,
              context.coordinator.cellProvider,
              context.coordinator.headerProvider)
     }

@@ -14,7 +14,9 @@ struct FeedView: View {
     @State var selectedItem: FeedItemViewModel?
     
     var body: some View {
-        CompositionalList(items) { model, indexPath in
+        CompositionalList(items, customConfiguration: { collectionView in
+            collectionView.showsVerticalScrollIndicator = false
+        }) { model, indexPath in
             Group {
                 switch indexPath.section {
                 case 0, 2, 3:
