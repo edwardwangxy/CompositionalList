@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		338B99122DE8160D0090CC0C /* CompositionalList in Frameworks */ = {isa = PBXBuildFile; productRef = 338B99112DE8160D0090CC0C /* CompositionalList */; };
 		7B0128F825B65F1F0040B70B /* CustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0128F725B65F1F0040B70B /* CustomLayout.swift */; };
 		7B0997D225AEA7B4004E3DEE /* FeedGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0997D125AEA7B4004E3DEE /* FeedGenerator.swift */; };
 		7B0997DA25AEB7B9004E3DEE /* CombineAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0997D925AEB7B9004E3DEE /* CombineAPI.swift */; };
@@ -22,7 +23,6 @@
 		7B1DD11D25ACD0CD00897A98 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B1DD11C25ACD0CD00897A98 /* Preview Assets.xcassets */; };
 		7B1DD12825ACD0CD00897A98 /* CompositionalListExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1DD12725ACD0CD00897A98 /* CompositionalListExampleTests.swift */; };
 		7B1DD13325ACD0CD00897A98 /* CompositionalListExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1DD13225ACD0CD00897A98 /* CompositionalListExampleUITests.swift */; };
-		7B1DD14525AD1AE500897A98 /* CompositionalList in Frameworks */ = {isa = PBXBuildFile; productRef = 7B1DD14425AD1AE500897A98 /* CompositionalList */; };
 		7B1DD1D225AD557300897A98 /* MarvelClient in Frameworks */ = {isa = PBXBuildFile; productRef = 7B1DD1D125AD557300897A98 /* MarvelClient */; };
 		7B1DD1E025AD5CF600897A98 /* MarvelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1DD1DF25AD5CF600897A98 /* MarvelProvider.swift */; };
 		7B1DD1E825AD5E5700897A98 /* CarachterArtworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1DD1E725AD5E5700897A98 /* CarachterArtworkView.swift */; };
@@ -83,9 +83,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				338B99122DE8160D0090CC0C /* CompositionalList in Frameworks */,
 				7B1DD1EE25AD5E9400897A98 /* SDWebImageSwiftUI in Frameworks */,
 				7B1DD1D225AD557300897A98 /* MarvelClient in Frameworks */,
-				7B1DD14525AD1AE500897A98 /* CompositionalList in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,9 +251,9 @@
 			);
 			name = CompositionalListExample;
 			packageProductDependencies = (
-				7B1DD14425AD1AE500897A98 /* CompositionalList */,
 				7B1DD1D125AD557300897A98 /* MarvelClient */,
 				7B1DD1ED25AD5E9400897A98 /* SDWebImageSwiftUI */,
+				338B99112DE8160D0090CC0C /* CompositionalList */,
 			);
 			productName = CompositionalListExample;
 			productReference = 7B1DD11225ACD0CB00897A98 /* CompositionalListExample.app */;
@@ -327,9 +327,9 @@
 			);
 			mainGroup = 7B1DD10925ACD0CB00897A98;
 			packageReferences = (
-				7B1DD14325AD1AE500897A98 /* XCRemoteSwiftPackageReference "CompositionalList" */,
 				7B1DD1D025AD557300897A98 /* XCRemoteSwiftPackageReference "MarvelClient" */,
 				7B1DD1EC25AD5E9400897A98 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				338B99102DE8160D0090CC0C /* XCLocalSwiftPackageReference "../../../CompositionalList" */,
 			);
 			productRefGroup = 7B1DD11325ACD0CB00897A98 /* Products */;
 			projectDirPath = "";
@@ -547,7 +547,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"CompositionalListExample/Preview Content\"";
-				DEVELOPMENT_TEAM = CQ45U4X9K3;
+				DEVELOPMENT_TEAM = YLB8HSV3F3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CompositionalListExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -555,7 +555,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jamesrochabrun.CompositionalListExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uwwxy.testCompositionalListExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -569,7 +569,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"CompositionalListExample/Preview Content\"";
-				DEVELOPMENT_TEAM = CQ45U4X9K3;
+				DEVELOPMENT_TEAM = YLB8HSV3F3;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CompositionalListExample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -577,7 +577,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jamesrochabrun.CompositionalListExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uwwxy.testCompositionalListExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -709,15 +709,14 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		7B1DD14325AD1AE500897A98 /* XCRemoteSwiftPackageReference "CompositionalList" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/jamesrochabrun/CompositionalList";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
+/* Begin XCLocalSwiftPackageReference section */
+		338B99102DE8160D0090CC0C /* XCLocalSwiftPackageReference "../../../CompositionalList" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../../CompositionalList;
 		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
 		7B1DD1D025AD557300897A98 /* XCRemoteSwiftPackageReference "MarvelClient" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jamesrochabrun/MarvelClient";
@@ -737,9 +736,8 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		7B1DD14425AD1AE500897A98 /* CompositionalList */ = {
+		338B99112DE8160D0090CC0C /* CompositionalList */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 7B1DD14325AD1AE500897A98 /* XCRemoteSwiftPackageReference "CompositionalList" */;
 			productName = CompositionalList;
 		};
 		7B1DD1D125AD557300897A98 /* MarvelClient */ = {

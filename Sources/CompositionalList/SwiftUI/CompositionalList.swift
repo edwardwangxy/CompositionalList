@@ -77,13 +77,14 @@ public struct CompositionalList<ViewModel: SectionIdentifierViewModel,
 extension CompositionalList: UIViewControllerRepresentable {
     
     public func makeUIViewController(context: Context) -> Diff {
-        Diff(layout: context.coordinator.layout,
+        return Diff(layout: context.coordinator.layout,
              collectionViewDelegate: context.coordinator,
              context.coordinator.cellProvider,
              context.coordinator.headerProvider)
     }
     
     public func updateUIViewController(_ uiViewController: Diff, context: Context) {
+        context.coordinator.itemsPerSection = self.itemsPerSection
         uiViewController.applySnapshotWith(context.coordinator.itemsPerSection)
     }
 }

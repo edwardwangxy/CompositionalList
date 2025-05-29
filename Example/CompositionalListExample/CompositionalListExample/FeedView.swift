@@ -14,30 +14,29 @@ struct FeedView: View {
     @State var selectedItem: FeedItemViewModel?
     
     var body: some View {
-        if items.isEmpty {
-            ActivityIndicator()
-        } else {
-            CompositionalList(items) { model, indexPath in
-                Group {
-                    switch indexPath.section {
-                    case 0, 2, 3:
-                        TileInfo(artworkViewModel: model)
-                    case 1:
-                        ListItem(artworkViewModel: model)
-                    default:
-                        ArtWork(artworkViewModel: model)
-                    }
+        CompositionalList(items) { model, indexPath in
+            Group {
+                switch indexPath.section {
+                case 0, 2, 3:
+                    TileInfo(artworkViewModel: model)
+                        .onTapGesture {
+                            self.items[0].cellIdentifiers.remove(at: 0)
+                        }
+                case 1:
+                    ListItem(artworkViewModel: model)
+                default:
+                    ArtWork(artworkViewModel: model)
                 }
-            }.sectionHeader { sectionIdentifier, kind, indexPath in
-                TitleHeaderView(title: sectionIdentifier.rawValue)
             }
-            .selectedItem {
-                selectedItem = $0
-            }
-            .customLayout(.composed())
-            .sheet(item: $selectedItem) { item in
-                ItunesFeedItemDetailView(viewModel: item)
-            }
+        }.sectionHeader { sectionIdentifier, kind, indexPath in
+            TitleHeaderView(title: sectionIdentifier.rawValue)
+        }
+        .selectedItem {
+            selectedItem = $0
+        }
+        .customLayout(.composed())
+        .sheet(item: $selectedItem) { item in
+            ItunesFeedItemDetailView(viewModel: item)
         }
     }
 }

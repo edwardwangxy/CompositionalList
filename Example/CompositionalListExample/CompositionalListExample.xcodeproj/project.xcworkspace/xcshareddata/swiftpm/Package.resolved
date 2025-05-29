@@ -1,43 +1,33 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "CompositionalList",
-        "repositoryURL": "https://github.com/jamesrochabrun/CompositionalList",
-        "state": {
-          "branch": null,
-          "revision": "d0fd87583ad102169f9eeaa84fce22bb7adc6023",
-          "version": "1.0.4"
-        }
-      },
-      {
-        "package": "MarvelClient",
-        "repositoryURL": "https://github.com/jamesrochabrun/MarvelClient",
-        "state": {
-          "branch": null,
-          "revision": "1a93d163eacbe82bc0d3d62dbec3e64ce036baf7",
-          "version": "1.0.3"
-        }
-      },
-      {
-        "package": "SDWebImage",
-        "repositoryURL": "https://github.com/SDWebImage/SDWebImage.git",
-        "state": {
-          "branch": null,
-          "revision": "a72df4849408da7e5d3c1b586797b7c601c41d1b",
-          "version": "5.12.1"
-        }
-      },
-      {
-        "package": "SDWebImageSwiftUI",
-        "repositoryURL": "https://github.com/SDWebImage/SDWebImageSwiftUI",
-        "state": {
-          "branch": null,
-          "revision": "4c7f169e39bc35d6b80d42b8eb8301bee9cd0907",
-          "version": "1.5.0"
-        }
+  "originHash" : "0b5afd753acd09a1bdd850e913ed01370fdf518aa41dd2aaf74018fec6739f2f",
+  "pins" : [
+    {
+      "identity" : "marvelclient",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jamesrochabrun/MarvelClient",
+      "state" : {
+        "revision" : "1a93d163eacbe82bc0d3d62dbec3e64ce036baf7",
+        "version" : "1.0.3"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "sdwebimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/SDWebImage.git",
+      "state" : {
+        "revision" : "a72df4849408da7e5d3c1b586797b7c601c41d1b",
+        "version" : "5.12.1"
+      }
+    },
+    {
+      "identity" : "sdwebimageswiftui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/SDWebImageSwiftUI",
+      "state" : {
+        "revision" : "4c7f169e39bc35d6b80d42b8eb8301bee9cd0907",
+        "version" : "1.5.0"
+      }
+    }
+  ],
+  "version" : 3
 }
