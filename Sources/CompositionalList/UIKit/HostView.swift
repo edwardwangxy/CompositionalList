@@ -34,7 +34,7 @@ final public class HostView<V: View>: UIView {
             let hostingController = UIHostingController(rootView: view)
             hostingController.view.translatesAutoresizingMaskIntoConstraints = false
             controller = hostingController
-            parent?.addChild(hostingController)
+//            parent?.addChild(hostingController)
             addSubview(hostingController.view)
             NSLayoutConstraint.activate ([
                 hostingController.view.topAnchor.constraint(equalTo: topAnchor),
@@ -42,7 +42,7 @@ final public class HostView<V: View>: UIView {
                 hostingController.view.bottomAnchor.constraint(equalTo: bottomAnchor),
                 hostingController.view.trailingAnchor.constraint(equalTo: trailingAnchor)
             ])
-            hostingController.didMove(toParent: parent)
+//            hostingController.didMove(toParent: parent)
         }
     }
 }
